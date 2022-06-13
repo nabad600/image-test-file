@@ -1,7 +1,7 @@
 // Module calling
 // const MongoClient = require("mongodb");
 const MongoClient = require("mongodb").MongoClient;
-const db = { connected: false }
+// const db = { connected: false }
 
 // Server path
 const url = 'mongodb://mongo:27017/';
@@ -17,15 +17,15 @@ MongoClient.connect(url, (err,client)=>{
 		console.log('Error in the connectivity');
 });
 
-db.client.on('topologyClosed', _=>{ db.connected=false, log(now()+'DB disconnected.') })
+// db.client.on('topologyClosed', _=>{ db.connected=false, log(now()+'DB disconnected.') })
 
-// const cleanup = (event) => {
-//   client.close();
-//   process.exit();
-// }
+const cleanup = (event) => {
+  client.close();
+  process.exit(0);
+}
 
-// process.on('SIGINT', cleanup);
-// process.on('SIGTERM', cleanup);
+process.on('SIGINT', cleanup);
+process.on('SIGTERM', cleanup);
 
 // const { MongoClient } = require('mongodb')
 // const db = { connected: false }
