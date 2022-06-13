@@ -11,5 +11,5 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
-process.exit(1);
+process.exit(0);
 console.log("Process exited successfully")
