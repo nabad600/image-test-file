@@ -9,11 +9,11 @@ const url = 'mongodb://mongo:27017/';
 
 MongoClient.connect(url, (err,client)=>{
 	if(!err) {
-		console.log("successful connection with the server");
+		console.log('successful connection with the server');
 	}
 	else
-		console.log("Error in the connectivity");
-})
+		console.log('Error in the connectivity');
+});
 
 // const { MongoClient } = require('mongodb')
 // const db = { connected: false }
