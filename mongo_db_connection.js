@@ -13,7 +13,7 @@ MongoClient.connect(url, (err,client)=>{
 	if(!err) {
 		console.log('successful connection with the server');
 	};
-	db.close();
+	client.close();
 // 	else
 // 		console.log('Error in the connectivity');
 });
