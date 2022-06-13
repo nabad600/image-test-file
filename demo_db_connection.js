@@ -7,7 +7,7 @@ var con = mysql.createConnection({
   database: "test"
 });
 
-connection.connect(function(err) {
+con.connect(function(err) {
   if (err) {
     return console.error('error: ' + err.message);
   }
