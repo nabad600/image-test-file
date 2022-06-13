@@ -24,7 +24,8 @@
 
 
 var MongoClient = require('mongodb').MongoClient;
-const {TextDecoder, TextEncoder} = require("util");
+var util= require('util');
+var encoder = new util.TextEncoder('utf-8');
 // Connect to the db
 MongoClient.connect("mongodb://mongo:27017/MyDb", function (err, db) {
     
