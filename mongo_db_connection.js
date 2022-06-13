@@ -5,7 +5,7 @@ const MongoClient = require("mongodb");
 const url = 'mongodb://mongo:27017/';
 
 // Name of the database
-const dbname = "conFusion";
+// const dbname = "conFusion";
 
 MongoClient.connect(url, (err,client)=>{
 	if(!err) {
