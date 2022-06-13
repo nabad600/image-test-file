@@ -17,43 +17,4 @@ MongoClient.connect(url, (err,client)=>{
 		console.log('Error in the connectivity');
 });
 
-// db.client.on('topologyClosed', _=>{ db.connected=false, log(now()+'DB disconnected.') })
-process.exit(0);
-// const cleanup = (event) => {
-//   client.close();
-//   process.exit(0);
-// }
-
-// process.on('SIGINT', cleanup);
-// process.on('SIGTERM', cleanup);
-
-// const { MongoClient } = require('mongodb')
-// const db = { connected: false }
-
-// db.client = new MongoClient('mongodb://mongo:27017/')
-// db.client.on('open', _=>{ db.connected=true, log(now()+'DB connected.') })
-// db.client.on('topologyClosed', _=>{ db.connected=false, log(now()+'DB disconnected.') })
-
-
-// var MongoClient = require('mongodb').MongoClient;
-// var util= require('util');
-// var encoder = new util.TextEncoder('utf-8');
-// // Connect to the db
-// MongoClient.connect("mongodb://mongo:27017/MyDb", function (err, db) {
-    
-//     db.collection('Persons', function (err, collection) {
-        
-//         collection.insert({ id: 1, firstName: 'Steve', lastName: 'Jobs' });
-//         collection.insert({ id: 2, firstName: 'Bill', lastName: 'Gates' });
-//         collection.insert({ id: 3, firstName: 'James', lastName: 'Bond' });
-        
-        
-
-//         db.collection('Persons').count(function (err, count) {
-//             if (err) throw err;
-            
-//             console.log('Total Rows: ' + count);
-//         });
-//     });
-                
-// });
+return this.client.close(false);
