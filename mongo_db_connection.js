@@ -15,6 +15,13 @@ MongoClient.connect(url, (err,client)=>{
 	else
 		console.log('Error in the connectivity');
 });
+const cleanup = (event) => {
+  client.close();
+  process.exit();
+}
+
+process.on('SIGINT', cleanup);
+process.on('SIGTERM', cleanup);
 
 // const { MongoClient } = require('mongodb')
 // const db = { connected: false }
