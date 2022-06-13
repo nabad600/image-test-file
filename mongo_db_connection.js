@@ -12,9 +12,10 @@ const url = 'mongodb://mongo:27017/';
 MongoClient.connect(url, (err,client)=>{
 	if(!err) {
 		console.log('successful connection with the server');
-	}
-	else
-		console.log('Error in the connectivity');
+	};
+	db.close();
+// 	else
+// 		console.log('Error in the connectivity');
 });
 
-return this.client.close(false);
+// return this.client.close(false);
