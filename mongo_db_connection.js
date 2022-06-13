@@ -24,7 +24,7 @@
 
 
 var MongoClient = require('mongodb').MongoClient;
-
+const {TextDecoder, TextEncoder} = require("util");
 // Connect to the db
 MongoClient.connect("mongodb://mongo:27017/MyDb", function (err, db) {
     
