@@ -11,6 +11,5 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
-process.on('exit', function (0) {
-   return console.log(`Process to exit with code`);
-});
+process.exit(1);
+console.log("Process exited successfully")
