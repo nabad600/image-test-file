@@ -1,6 +1,7 @@
 // Module calling
 // const MongoClient = require("mongodb");
 const MongoClient = require("mongodb").MongoClient;
+const db = { connected: false }
 
 // Server path
 const url = 'mongodb://mongo:27017/';
