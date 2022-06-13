@@ -2,7 +2,7 @@
 const MongoClient = require("mongodb");
 
 // Server path
-const url = 'mongodb://localhost:27017/';
+const url = 'mongodb://mongo:27017/';
 
 // Name of the database
 const dbname = "conFusion";
