@@ -19,7 +19,7 @@ con.connect(function(err) {
 //   if (err) throw err;
 //   console.log("Connected to the MySQL server.");
 // });
-connection.end(function(err) {
+con.end(function(err) {
   if (err) {
     return console.log('error:' + err.message);
   }
