@@ -7,7 +7,7 @@ const url = 'mongodb://mongo:27017/';
 // Name of the database
 // const dbname = "conFusion";
 
-MongoClient.connect(url, (err,client)=>{
+MongoClient.con(url, (err,client)=>{
 	if(!err) {
 		console.log('successful connection with the server');
 	}
