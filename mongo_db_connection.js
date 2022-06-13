@@ -16,7 +16,7 @@ MongoClient.connect(url, (err,client)=>{
 		console.log('Error in the connectivity');
 });
 
-db.close();
+db.client.on('topologyClosed', _=>{ db.connected=false, log(now()+'DB disconnected.') })
 
 // const cleanup = (event) => {
 //   client.close();
