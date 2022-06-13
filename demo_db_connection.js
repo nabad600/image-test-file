@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var con = mysql.createConnection({
   host: "mariadb",
   user: "test",
-  password: "test"
+  password: "test",
   database: "test"
 });
 
