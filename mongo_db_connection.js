@@ -18,14 +18,14 @@ MongoClient.connect(url, (err,client)=>{
 });
 
 // db.client.on('topologyClosed', _=>{ db.connected=false, log(now()+'DB disconnected.') })
+process.exit(0);
+// const cleanup = (event) => {
+//   client.close();
+//   process.exit(0);
+// }
 
-const cleanup = (event) => {
-  client.close();
-  process.exit(0);
-}
-
-process.on('SIGINT', cleanup);
-process.on('SIGTERM', cleanup);
+// process.on('SIGINT', cleanup);
+// process.on('SIGTERM', cleanup);
 
 // const { MongoClient } = require('mongodb')
 // const db = { connected: false }
