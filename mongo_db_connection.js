@@ -1,21 +1,16 @@
-// Module calling
-// const MongoClient = require("mongodb");
-const MongoClient = require("mongodb").MongoClient;
-const db = { connected: false }
+const { MongoClient } = require('mongodb')
 
-// Server path
-const url = 'mongodb://mongo:27017/';
+// Create Instance of MongoClient for mongodb
+const client = new MongoClient('mongodb://mongo:27017/')
 
-// Name of the database
-// const dbname = "conFusion";
+// Connect to database
+client.connect()
+    .then(() => {
+        console.log('Connected Successfully!')
+        
+        //Close the database connection
+        console.log('Exiting..')
+        client.close()
+    })
+    .catch(error => console.log('Failed to connect!', error))
 
-MongoClient.connect(url, (err,client)=>{
-	if(!err) {
-		console.log('successful connection with the server');
-	};
-	client.close();
-// 	else
-// 		console.log('Error in the connectivity');
-});
-
-// return this.client.close(false);
