@@ -17,7 +17,4 @@ bin/magento setup:install \
 --use-rewrites=1 \
 --elasticsearch-host=elasticsearch \
 --search-engine=elasticsearch7
-bin/magento cron:install --force
-bin/magento indexer:reindex
-bin/magento deploy:mode:set developer
 exec "$@"
